@@ -16,11 +16,17 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,readonly)NSInteger upVotes;
 @property(nonatomic,readonly)NSInteger downVotes;
 @property(nonatomic,readonly)NSInteger numberOfComments;
+@property(nonatomic,readonly,copy)NSString *thumbnailURLAsString;
+@property(nonatomic,readonly)BOOL SFW;
+
+
 
 -(instancetype)initWithTitle:(NSString *)title
                      upVotes:(NSInteger )ups
                    downVotes:(NSInteger )downs
-            numberOfComments:(NSInteger )numberOfComments;
+            numberOfComments:(NSInteger )numberOfComments
+        thumbnailURLAsString:(NSString *)thumbnailURL
+                         SFW:(BOOL)SFW;
 @end
 
 @interface DLPost  (JSONConvertable)
