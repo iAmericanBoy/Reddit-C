@@ -27,13 +27,66 @@
                                 <rect key="frame" x="0.0" y="76" width="375" height="591"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="postCell" rowHeight="120" id="Xjl-UL-cnF">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="postCell" rowHeight="120" id="Xjl-UL-cnF" customClass="DLPostDetailTableViewCell">
                                         <rect key="frame" x="0.0" y="28" width="375" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xjl-UL-cnF" id="ut7-Py-fKi">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3pP-LT-vLn">
+                                                    <rect key="frame" x="15" y="11" width="345" height="98"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EEE-b5-j2U">
+                                                            <rect key="frame" x="0.0" y="0.0" width="98" height="98"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="EEE-b5-j2U" secondAttribute="height" multiplier="1:1" id="Kjz-Dj-6Go"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="ZEV-gN-dL0">
+                                                            <rect key="frame" x="98" y="3.5" width="247" height="91"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e94-ry-Yd1">
+                                                                    <rect key="frame" x="102.5" y="0.0" width="42" height="20.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="a9i-Zq-YmO">
+                                                                    <rect key="frame" x="66" y="70.5" width="115" height="20.5"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gGO-kg-t09">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="42" height="20.5"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o09-xX-ETu">
+                                                                            <rect key="frame" x="73" y="0.0" width="42" height="20.5"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                </stackView>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="3pP-LT-vLn" firstAttribute="top" secondItem="ut7-Py-fKi" secondAttribute="topMargin" id="Gi2-f2-m1F"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="3pP-LT-vLn" secondAttribute="trailing" id="SZx-Nf-UuP"/>
+                                                <constraint firstItem="3pP-LT-vLn" firstAttribute="leading" secondItem="ut7-Py-fKi" secondAttribute="leadingMargin" id="THk-Zh-eWh"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="3pP-LT-vLn" secondAttribute="bottom" id="rdf-bV-oFu"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="commentNumberLabel" destination="gGO-kg-t09" id="oRf-t6-f72"/>
+                                            <outlet property="thumbnailImageView" destination="EEE-b5-j2U" id="OrC-P0-LII"/>
+                                            <outlet property="titleLabel" destination="e94-ry-Yd1" id="8CN-mG-AhS"/>
+                                            <outlet property="upVaoteLabel" destination="o09-xX-ETu" id="uHJ-lk-qij"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

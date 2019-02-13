@@ -74,8 +74,8 @@ static NSString * const baseURlString = @"https://www.reddit.com/r/";
         }
         
         if (data) {
-            UIImage *cardpic = [[UIImage alloc] initWithData:data scale:1];
-            completion(cardpic);
+            UIImage *postpic = [[UIImage alloc] initWithData:data scale:1];
+            completion(postpic);
         }
     }] resume];
 }

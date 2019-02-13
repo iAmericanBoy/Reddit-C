@@ -7,16 +7,26 @@
 //
 
 #import "DLPostViewController.h"
+#import "DLPostDetailTableViewCell.h"
 #import "DLPostController.h"
 
 @interface DLPostViewController ()
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+@property (nonatomic,readwrite)NSMutableArray<DLPost *> *postArray;
 
 @end
 
 @implementation DLPostViewController
+
+-(void)setPostArray:(NSMutableArray<DLPost *> *)postArray
+{
+    _postArray = postArray;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.tableView reloadData];
+    });
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -25,25 +35,22 @@
     self.searchBar.delegate = self;
     
     [DLPostController fetchPostForSearchTerm:@"funny" completion:^(NSMutableArray<DLPost *> * _Nullable post) {
-        NSLog(@"%@", post);
+        self.postArray = post;
     }];
 
 }
 
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    return [UITableViewCell new];
+    DLPostDetailTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"postCell" forIndexPath:indexPath];
+    
+    cell.post = [_postArray objectAtIndex:indexPath.row ];
+    
+    return cell;
 }
 
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    return [[self postArray] count];
 }
 
-
-
-
-
-
 @end
-
-

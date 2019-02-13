@@ -15,6 +15,7 @@
 		B6E92F822214B62300563F25 /* DLPost.m in Sources */ = {isa = PBXBuildFile; fileRef = B6E92F812214B62300563F25 /* DLPost.m */; };
 		B6E92F862214BD0400563F25 /* DLPostController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6E92F852214BD0400563F25 /* DLPostController.m */; };
 		B6E92F8A2214C4A300563F25 /* DLPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6E92F892214C4A300563F25 /* DLPostViewController.m */; };
+		B6E92F8E2214CFF000563F25 /* DLPostDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B6E92F8D2214CFF000563F25 /* DLPostDetailTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		B6E92F852214BD0400563F25 /* DLPostController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLPostController.m; sourceTree = "<group>"; };
 		B6E92F882214C4A300563F25 /* DLPostViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLPostViewController.h; sourceTree = "<group>"; };
 		B6E92F892214C4A300563F25 /* DLPostViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLPostViewController.m; sourceTree = "<group>"; };
+		B6E92F8C2214CFF000563F25 /* DLPostDetailTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLPostDetailTableViewCell.h; sourceTree = "<group>"; };
+		B6E92F8D2214CFF000563F25 /* DLPostDetailTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLPostDetailTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,8 @@
 			children = (
 				B6E92F882214C4A300563F25 /* DLPostViewController.h */,
 				B6E92F892214C4A300563F25 /* DLPostViewController.m */,
+				B6E92F8C2214CFF000563F25 /* DLPostDetailTableViewCell.h */,
+				B6E92F8D2214CFF000563F25 /* DLPostDetailTableViewCell.m */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -193,6 +198,7 @@
 			files = (
 				B6E92F782214B18400563F25 /* main.m in Sources */,
 				B6E92F8A2214C4A300563F25 /* DLPostViewController.m in Sources */,
+				B6E92F8E2214CFF000563F25 /* DLPostDetailTableViewCell.m in Sources */,
 				B6E92F822214B62300563F25 /* DLPost.m in Sources */,
 				B6E92F6A2214B18000563F25 /* AppDelegate.m in Sources */,
 				B6E92F862214BD0400563F25 /* DLPostController.m in Sources */,
