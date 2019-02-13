@@ -33,11 +33,6 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.searchBar.delegate = self;
-    
-    [DLPostController fetchPostForSearchTerm:@"funny" completion:^(NSMutableArray<DLPost *> * _Nullable post) {
-        self.postArray = post;
-    }];
-
 }
 
 
@@ -51,6 +46,22 @@
 
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [[self postArray] count];
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return UITableViewAutomaticDimension;
+}
+
+-(void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
+{
+    [DLPostController fetchPostForSearchTerm:searchText completion:^(NSMutableArray<DLPost *> * _Nullable post) {
+        self.postArray = post;
+    }];
+}
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+    [searchBar resignFirstResponder];
 }
 
 @end
