@@ -48,10 +48,10 @@ static NSString * const baseURlString = @"https://www.reddit.com/r/";
             NSMutableArray<DLPost *> *array = [NSMutableArray<DLPost *> new];
 
             for (NSDictionary* dicionary in childArray) {
-                DLPost *newPost = [[DLPost alloc] initWithDictionary:dicionary];
+                DLPost *newPost = [[DLPost alloc] initWithDictionary:dicionary[@"data"]];
                 [array addObject:newPost];
             }
-            completion(array)
+            completion(array);
 
 
         }
