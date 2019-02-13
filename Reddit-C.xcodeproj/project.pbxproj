@@ -12,6 +12,7 @@
 		B6E92F722214B18400563F25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6E92F712214B18400563F25 /* Assets.xcassets */; };
 		B6E92F752214B18400563F25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6E92F732214B18400563F25 /* LaunchScreen.storyboard */; };
 		B6E92F782214B18400563F25 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B6E92F772214B18400563F25 /* main.m */; };
+		B6E92F822214B62300563F25 /* DLPost.m in Sources */ = {isa = PBXBuildFile; fileRef = B6E92F812214B62300563F25 /* DLPost.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,8 @@
 		B6E92F742214B18400563F25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B6E92F762214B18400563F25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6E92F772214B18400563F25 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B6E92F802214B62300563F25 /* DLPost.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLPost.h; sourceTree = "<group>"; };
+		B6E92F812214B62300563F25 /* DLPost.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLPost.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +60,7 @@
 			children = (
 				B6E92F682214B18000563F25 /* AppDelegate.h */,
 				B6E92F692214B18000563F25 /* AppDelegate.m */,
+				B6E92F832214B62700563F25 /* Model */,
 				B6E92F7E2214B1A700563F25 /* Views */,
 				B6E92F7F2214B1AF00563F25 /* Resourses */,
 			);
@@ -80,6 +84,15 @@
 				B6E92F772214B18400563F25 /* main.m */,
 			);
 			path = Resourses;
+			sourceTree = "<group>";
+		};
+		B6E92F832214B62700563F25 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B6E92F802214B62300563F25 /* DLPost.h */,
+				B6E92F812214B62300563F25 /* DLPost.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,6 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6E92F782214B18400563F25 /* main.m in Sources */,
+				B6E92F822214B62300563F25 /* DLPost.m in Sources */,
 				B6E92F6A2214B18000563F25 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
