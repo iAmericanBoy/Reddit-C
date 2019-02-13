@@ -12,7 +12,6 @@
 
 static NSString * const baseURlString = @"https://www.reddit.com/r/";
 
-
 + (void)fetchPostForSearchTerm:(NSString *)serchTerm completion:(void (^)(NSMutableArray<DLPost *> * _Nullable))completion
 {
     NSURL *baseURL = [[NSURL alloc]initWithString:baseURlString];
@@ -25,7 +24,7 @@ static NSString * const baseURlString = @"https://www.reddit.com/r/";
     
     NSMutableArray<DLPost *> *emptyArray = [NSMutableArray<DLPost *> new];
     
-    [[[NSURLSession sharedSession] dataTaskWithURL:searchURL completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+    [[[NSURLSession sharedSession] dataTaskWithURL:searchURLWithFileExtension completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if (error) {
             NSLog(@"There was an Error in %s :%@, %@", __PRETTY_FUNCTION__, error, error.localizedDescription);
             completion(emptyArray);

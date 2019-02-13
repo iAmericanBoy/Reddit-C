@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface DLPostController : NSObject
 
 +(void)fetchPostForSearchTerm:(NSString *)serchTerm
-                 completion:(void (^_Nullable) (NSMutableArray<DLPost *> *_Nullable card))completion;
+                 completion:(void (^_Nullable) (NSMutableArray<DLPost *> *_Nullable post))completion;
 +(void)fetchImageForThumpnail:(DLPost *)post
               completion:(void (^_Nullable) (UIImage *_Nullable pic))completion;
 
